@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Novakovity Radován">
+    <meta name="description" content="Website of ServerPlanet game server hosting.">
+    <title>ServerPlanet</title>
+    <link href="Pictures/favicon.png" rel="icon" type="image/x-icon">
+    <link href="Style/style.css" rel="stylesheet">
+
+    <script src="Javascript_files/calculation.js"></script>
+
+</head>
+<body>
+    <header>
+		    <p>ServerPlanet Game Server Hosting</p>
+	</header>
+    
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="games.html">Games</a></li>
+            <li><a href="#" id="active">Server Prices</a></li>
+			<li><a href="help.html">Help</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		<article>
+            <div id="serverfeatures">
+                <h2>Affordable Game Hosting</h2>
+                <ul class="centerlist">
+                    <li>
+                        High Clock Speed Processors
+                    </li>
+                    <li>
+                        Powered by NVMe SSD hard drives
+                    </li>
+                    <li>
+                        Instant Server Activation
+                    </li>
+                    <li>
+                        Global Locations
+                    </li>
+                    <li>
+                        Automated Server Notifications
+                    </li>
+                    <li>
+                        Automated Task Scheduling
+                    </li>
+                    <li>
+                        Supports Cutting Edge Mods
+                    </li>
+                    <li>
+                        1 Click Mod Pack Installer
+                    </li>
+                </ul>
+            </div>
+
+            <div id="controlpanel">
+                <br>
+                <h2>Easy-to-Use Control Panel</h2>
+                <p>
+                    Manage your server and find what you need quickly and easily with our refined game server control panel, complete with mod installer, auto backups, and more.
+                    <br>
+                    We use a heavly customized version of Pterodactyl Panel we self maintain for our services.
+                </p>
+                <img src="Pictures/panel-preview.png" alt="control panel">
+            </div>
+
+            <div id="purchaseSection">
+                <h2>Find The Perfect Server</h2>
+                <div id="selectGame">
+                    <label for="tier1Games">Choose a game:</label>
+                    <br>
+                    <select name="games" id="tier1Games">
+                        <option value="avorion">Avorion</option>
+                        <option value="Counter-Strike Go">Counter-Strike GO</option>
+                        <option value="Counter-Strike Source">Counter-Strike Source</option>
+                        <option value="Factorio">Factorio</option>
+                        <option value="Garry's Mod">Garry's Mod</option>
+                        <option value="Holdfast: Nations at War">Holdfast: Nations at War</option>
+                        <option value="Minecraft">Minecraft</option>
+                        <option value="Minecraft Bedrock">Minecraft Bedrock</option>
+                        <option value="Mordhau">Mordhau</option>
+                        <option value="Rust">Rust</option>
+                        <option value="Satisfactory">Satisfactory</option>
+                        <option value="Starbound">Starbound</option>
+                        <option value="Terraria">Terraria</option>
+                        <option value="Team Fortress 2">Team Fortress 2</option>
+                        <option value="Valheim">Valheim</option>
+                    </select>
+                </div>
+                
+                <div id="preplans">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3>
+                                    Tier 1 <br>
+                                    $18 USD
+                                </h3>
+                                <p>
+                                    1 CPU Core<br>
+                                    4 GB Memory <br>
+                                    10 GB Disk Space <br>
+                                    
+                                    <button type="button" id="btn1" value="18" onclick="tierOnePrice()">Select</button>
+                                </p>
+                            </td>
+    
+                            <td>
+                                <h3>
+                                    Tier 2 <br>
+                                    $36 USD
+                                </h3>
+                                <p>
+                                    4 CPU Core<br>
+                                    16 GB Memory <br>
+                                    50 GB Disk Space <br>
+                                    <button type="button" id="btn2" value="36" onclick="tierTwoPrice()">Select</button>
+                                </p>
+                            </td>
+    
+                            <td>
+                                <h3>
+                                    Tier 3 <br>
+                                    $54 USD
+                                </h3>
+                                <p>
+                                    6 CPU Core<br>
+                                    32 GB Memory <br>
+                                    70 GB Disk Space <br>
+                                    <button type="button" id="btn3" value="54" onclick="tierThreePrice()">Select</button>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="customconfiguration">
+                    <h3>Custom configuration</h3>
+                    <label for="cpu">Choose number of CPU cores:</label>
+                    <br>
+                    <select name="cpu" id="cpu">
+                        <option value="1">1 Core $1 USD</option>
+                        <option value="3">2 Core $3 USD</option>
+                        <option value="6">3 Core $6 USD</option>
+                        <option value="9">4 Core $9 USD</option>
+                        <option value="12">5 Core $12 USD</option>
+                        <option value="15">6 Core $15 USD</option>
+                    </select>
+                    <br>
+                    <label for="memory">Memory:</label>
+                    <br>
+                    <select name="memory" id="memory">
+                        <option value="1">1 GB $1 USD</option>
+                        <option value="6">2 GB $6 USD</option>
+                        <option value="12">4 GB $12 USD</option>
+                        <option value="21">16 GB $21 USD</option>
+                        <option value="39">32 GB $39 USD</option>
+                        <option value="52">64 GB $52 USD</option>
+                    </select>
+                    <br>
+                    <label for="diskspace">NVMe SSD Disk Space:</label>
+                    <br>
+                    <select name="diskspace" id="diskspace">
+                        <option value="1">20 GB $1 USD</option>
+                        <option value="2">30 GB $2 USD</option>
+                        <option value="3">40 GB $3 USD</option>
+                        <option value="5">60 GB $5 USD</option>
+                        <option value="7">80 GB $7 USD</option>
+                        <option value="9">100 GB $9 USD</option>
+                    </select>
+                    <br>
+                    <br>
+
+                    <button type="button" id="btn4" onclick="configurationSum()">Select configuration</button>
+                </div>
+                <div id="shoppingcart">
+                    <br>
+                    <strong class="totalpricetitle">Total cost</strong><br>
+                    <div id="priceDiv">$0</div> <br>
+                    <button type="button" id="btn5">Order</button>
+                </div>
+            </div>
+		</article>
+	</div>
+	<footer>
+        <p>
+            E-mail: serverplanet_01@fakemail.com
+        </p>
+		<p>
+            Disclaimer: This is a website only for a school project. Not intended for any commerical purposes.
+        </p>
+        <p>
+            All rights to the text, and pictures belong to AleForge LLC.
+        </p>
+        
+	</footer>
+</body>
+</html>

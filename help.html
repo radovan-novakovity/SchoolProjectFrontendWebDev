@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Novakovity Radován">
+    <meta name="description" content="Website of ServerPlanet game server hosting.">
+    <title>ServerPlanet</title>
+    <link href="Pictures/favicon.png" rel="icon" type="image/x-icon">
+    <link href="Style/style.css" rel="stylesheet">
+
+    
+    <script src="Javascript_files/jquery-3.6.0.min.js"></script>
+    <script src="Javascript_files/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="Javascript_files/jquerryvalidation.js"></script>
+</head>
+<body>
+    <header>
+		    <p>ServerPlanet Game Server Hosting</p>
+	</header>
+    
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="games.html">Games</a></li>
+            <li><a href="serverprices.html">Server Prices</a></li>
+			<li><a href="#" id="active">Help</a></li>
+		</ul>
+        
+	</nav>
+	<div id="content">
+		<article>
+            <div id="supportform">
+                <h2>Create new Support Request</h2>
+
+                <p>Is there something you need help with?</p>
+
+                <p>Fill out this form and we'll get back to you.</p>
+
+                <form action="http://szamtud.uni-corvinus.hu/~blang/receive.php" method="post" id="jqueryForm" novalidate>
+                    <p>
+                        <label for="name">Name </label><br>
+                        <input type="text" name="name" id="name" size="40">
+                    </p>
+
+                    <p>
+                        <label for="email">Email Address</label><br>
+                        <input type="text" name="email" id="email" size="40">
+                    </p>
+
+                    <p>
+                        <label for="mySubject">Subject:</label><br>
+                        <input list="subject" id="mySubject" name="mySubject" size="40"/>
+                        <datalist id="subject">
+                            <option value="Server issues">
+                            <option value="Billing issues">
+                            <option value="General question">
+                            <option value="Game mod related">
+                        </datalist>
+                    </p>
+
+                    <p>
+                        Are you a current customer? <br>
+                        <label for="yes">Yes</label>
+                       <input type="radio" id="yes" name="currentCustomer" value="Yes">
+                       <br>
+                       <label for="no">No</label>
+                       <input type="radio" id="no" name="currentCustomer" value="No">
+                       
+                    </p>
+
+                    <p>
+                        <label for="prioritySelect">Choose your priority:</label><br>
+                        <select name="prioritySelect" id="prioritySelect">
+                            <option value="Low"> Low </option>
+                            <option value="Medium"> Medium </option>
+                            <option value="High"> High </option>
+                        </select>
+                    </p>
+                    
+                    <p>
+                        <label for="date">Please specify the date if you had an issue.</label><br>
+                        <input type="date" name="date" id="date">
+                    </p>
+                    
+                    <p>
+                        <label for="userMessage">Describe your request in detail:</label><br>
+                            <textarea name="userMessage" id="userMessage" cols="40" rows="40"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="useraccept">Please accept our terms of use. </label><br>
+                        <input type="checkbox" name="useraccept" id="useraccept">
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Submit">
+                    </p>
+                </form>
+            </div>
+		</article>
+        <aside id="support">
+            <p>
+                <strong>Support is available at varying hours.</strong>
+            </p>
+            <p>
+                Tickets: Submit a ticket 24/7. Response times will vary. <br> 
+                During normal business hours of 8 am - 6 pm eastern responses should be within 30 minutes. <br>
+                After hours responses will be delayed due to decreased staffing.
+            </p>
+        </aside>
+	</div>
+	<footer>
+        <p>
+            E-mail: serverplanet_01@fakemail.com
+        </p>
+		<p>
+            Disclaimer: This is a website only for a school project. Not intended for any commerical purposes.
+        </p>
+        <p>
+            All rights to the text, and pictures belong to AleForge LLC.
+        </p>
+        
+	</footer>
+</body>
+</html>
